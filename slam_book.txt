@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Function to get user input
+get_input() {
+    echo -n "$1: "
+    read input
+    echo "$1: $input" >> slam_book.txt
+}
+
+# Main script starts here
+clear
+echo "Welcome to the Digital Slam Book!"
+echo "---------------------------------"
+
+# Check if the slam_book.txt file exists, if not, create one
+if [ ! -e slam_book.txt ]; then
+    touch slam_book.txt
+fi
+
+# Get user's name
+get_input "Name"
+
+# Get user's nickname
+get_input "Nickname"
+
+# Get user's date of birth
+get_input "Date of Birth"
+
+# Get user's favorite color
+get_input "Favorite Color"
+
+# Get user's favorite food
+get_input "Favorite Food"
+
+# Get user's hobbies
+get_input "Hobbies"
+
+# Get user's favorite quote
+get_input "Favorite Quote"
+
+echo "Thank you! Your inputs have been saved in slam_book.txt"
+Name: murali
+Nickname: oye
+Date of Birth: 5-11-1996
+Favorite Color: black
+Favorite Food: fish
+Hobbies: cricket
+Favorite Quote: goog heart gives you good life
